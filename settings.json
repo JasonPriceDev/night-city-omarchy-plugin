@@ -1,0 +1,39 @@
+{
+  "accent": "#f3ec35",
+  "name": null,
+  "dateFormat": null,
+  "timeFormat": null,
+  "clock24": null,
+  "weatherLocation": null,
+  "temperatureUnit": null,
+  "weatherRefreshMinutes": null,
+  "searchEngine": "DuckDuckGo",
+  "links": [
+    {
+      "category": "CODE",
+      "name": "GitHub",
+      "url": "https://github.com"
+    },
+    {
+      "category": "CODE",
+      "name": "GitLab",
+      "url": "https://gitlab.com"
+    },
+    {
+      "category": "SYSTEM",
+      "name": "Omarchy Manual",
+      "url": "https://learn.omacom.io/2/the-omarchy-manual"
+    },
+    {
+      "category": "REFERENCE",
+      "name": "Arch Wiki",
+      "url": "https://wiki.archlinux.org"
+    },
+    {
+      "category": "MEDIA",
+      "name": "YouTube",
+      "url": "https://www.youtube.com"
+    }
+  ],
+  "quotes": null
+}
