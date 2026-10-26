@@ -4,7 +4,14 @@ Native Quickshell desktop dashboard, inspired by the Cyberpunk homepage.
 No extension code or artwork is bundled. Daily quotes are original cyberpunk-style
 lines; see [QUOTES.md](QUOTES.md) for research references and selection details.
 
-Source lives in `~/code/night-city-omarchy-plugin`.
+Plugin source and bundled assets live in `src/`; tests live in `tests/`.
+Run the weather tests from the repository root with:
+
+```bash
+PYTHONPATH=src python3 -m unittest discover -s tests -v
+```
+
+The repository lives in `~/code/night-city-omarchy-plugin`.
 Omarchy loads a separate installed copy at
 `~/.config/omarchy/plugins/priceja.background`. Source edits do not change
 the desktop until you explicitly install them.
@@ -38,7 +45,7 @@ unrelated desktop settings. Restart the shell if it does not reload automaticall
 Use only trusted local snapshots. The original full desktop backup is described
 below, separately from these plugin-only snapshots.
 
-Configuration: source settings.json provides defaults for first installation.
+Configuration: `src/settings.json` provides defaults for first installation.
 To change your live preferences, edit the installed settings.json explicitly;
 those changes reload automatically. Updating source settings does not overwrite
 your installed preferences.

@@ -2,7 +2,8 @@
 # Manually deploy a snapshot; preserve the installed user's settings.
 set -euo pipefail
 
-source_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
+project_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
+source_dir="$project_dir/src"
 destination="$HOME/.config/omarchy/plugins/priceja.background"
 backup_root="$HOME/.local/state/omarchy/backups"
 
@@ -23,12 +24,12 @@ if [[ -d $destination ]]; then
   if [[ -f $destination/settings.json ]]; then
     cp -- "$destination/settings.json" "$stage/settings.json"
   fi
-  backup=$("$source_dir/backup.sh")
+  backup=$("$project_dir/backup.sh")
   echo "Backup: $backup"
   # Copy the staged snapshot, retaining a valid plugin directory during updates.
   cp -a -- "$stage/." "$destination/"
 else
-  backup=$("$source_dir/backup.sh")
+  backup=$("$project_dir/backup.sh")
   echo "Backup: $backup"
   mv -- "$stage" "$destination"
 fi
